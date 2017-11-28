@@ -1,0 +1,94 @@
+<div class="page-content" *ngIf="this.APIService.LoadPage">
+    <div class="content">
+        <h1>{{ContactUsText}}</h1>
+        <div class="contactus-options">
+            <div class="contactus" (click)="NavigateTo('MAIL')">
+                <div>
+                    <span class="nghf ngh-mail hover"></span>
+                </div>
+                <div class="text">
+                    {{APIService.PageContent.Content.PageText.ContactUsEmail}}
+                </div>
+            </div>
+            <div class="contactus" (click)="NavigateTo('CALL')">
+                <div>
+                    <span class="nghf ngh-phone_in_talk"></span>
+                </div>
+                <div class="text">
+                    <p class="phone-display" [innerHtml]="APIService.PageContent.Content.PageText.ContactUsPhoneDisplay | phoneclick"></p>
+                </div>
+            </div>
+            <div class="contactus" (click)="NavigateTo('PAGE')">
+                <div>
+                    <span class="nghf ngh-facebook hover"></span>
+                </div>
+                <div class="text">
+                    {{APIService.PageContent.Content.PageText.ContactUsFacebookPage}}
+                </div>
+            </div>
+        </div>
+
+        <div class="client-info">
+
+            <div class="mid-header">{{APIService.PageContent.Content.PageText.ContactUsAssistText}}</div>
+
+            <form id="clientinfo" [formGroup]="contactUsForm">
+                <div class="clientInfoTable" [ngClass]="{'display-none':HideContactUsForm}">
+
+
+                    <div class="clientInfo">
+                        <div class="row">
+                            <div class="text">
+                                <label>Name</label>
+                            </div>
+                            <div class="control">
+                                <div class="input">
+                                    <input [ngClass]="{'Error': contactUsForm.controls.FullName.errors}" type="text" formControlName="FullName" />
+                                    <p class="error-msg" *ngIf="ReturnValid('FullName')">{{ReturnValid('FullName')}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="text">
+                                <label>Phone Number</label>
+                            </div>
+                            <div class="control">
+                                <div class="input">
+                                    <input [ngClass]="{'Error': contactUsForm.controls.PhoneNumber.errors}" type="text" id="phoneNumber" formControlName="PhoneNumber"
+                                        maxlength="10" />
+                                    <p class="error-msg" *ngIf="ReturnValid('PhoneNumber')">{{ReturnValid('PhoneNumber')}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="text">
+                                <label>Email Id</label>
+                            </div>
+                            <div class="control">
+                                <div class="input">
+                                    <input [ngClass]="{'Error': contactUsForm.controls.EmailId.errors}" type="text" formControlName="EmailId" />
+                                    <p class="error-msg" *ngIf="ReturnValid('EmailId')">{{ReturnValid('EmailId')}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clientInfoButton">
+                        <div>
+                            <button (click)="SubmitContactRequest('SUBMIT')">Submit</button>
+                            <button (click)="SubmitContactRequest('CLEAR')">Clear</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="enquiry-result" [ngStyle]="{'margin':(Response.ResultText === ''  || !ShowLoader)? '0px 0px':'30px 0px'}">
+                    <app-loader [ShowLoader]="ShowLoader"></app-loader>
+                    <div [ngStyle]="{'display':(Response.ResultText === '')? 'none':'block'}" class="result">
+                        <p [innerHtml]="Response.ResultText"></p>
+                        <button (click)="ResultClick()">Ok</button>
+                    </div>
+                </div>
+            </form>
+
+
+        </div>
+
+    </div>

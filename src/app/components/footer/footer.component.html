@@ -1,0 +1,8 @@
+<footer>
+  <div class="footer-content">
+  <div>{{Copyright}}  |   </div>
+  <div *ngIf="Copyright === ''">Copyright © 2017 Dhyan Travels</div>
+  <div ><a *ngFor="let links of LinkItems" [routerLink]="[links.Link]" >{{links.LinkName}}</a>
+       </div>
+  </div>
+  </footer>

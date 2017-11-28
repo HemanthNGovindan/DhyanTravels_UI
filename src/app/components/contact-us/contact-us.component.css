@@ -1,0 +1,186 @@
+
+/*.contact-us*/
+
+.page-content .content {
+    text-align: center;
+}
+
+.page-content .content .contactus-options {
+    /*padding: 3px 3px;*/
+    width: 100%;
+    text-align: center;
+    /** center the divs **/
+    margin-bottom: 50px;
+}
+
+.page-content .content .contactus-options .contactus {
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+    height: 130px;
+    /* font-size: 12px; */
+    /* text-align: left;                                                                                                                             */
+    /*border: 1px solid rgba(0, 53, 95, 0.29);*/
+    box-sizing: border-box;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-radius: 20px;
+    color: #00355f;
+    padding: 25px 0px;
+}
+
+.page-content .content .contactus-options .contactus .text {
+    margin-top: 2%;
+    font-size: 20px;
+}
+.page-content .content .contactus-options .contactus .text .phone-display{
+    margin: 0;
+}
+
+.page-content .content .contactus-options .contactus .text .phone-display a,
+.page-content .content .contactus-options .contactus .text .phone-display a:hover,
+.page-content .content .contactus-options .contactus .text .phone-display a:active,
+.page-content .content .contactus-options .contactus .text .phone-display a:visited,
+.page-content .content .contactus-options .contactus .text .phone-display a:link{
+color: #00355f;
+}
+
+.page-content .content .contactus-options .contactus span {
+    font-size: 50px;
+}
+
+.page-content .content .client-info {
+    background-color: #00355f;
+    width: 100%;
+    color: whitesmoke;
+    margin-bottom: 10px;
+    padding: 20px 30px;
+}
+
+.mid-header {
+    font-size: 20px;
+    text-align: center;
+}
+
+.page-content .content .client-info .row {
+    margin: 20px;
+}
+
+.page-content .content .client-info .row .text {
+    width: 45%;
+    display: inline-block;
+}
+
+.page-content .content .client-info .row .text label {
+    float: right;
+    margin-right: 5px;
+    line-height: 20px;
+    font-size: 20px;
+}
+
+.page-content .content .client-info .row .control {
+    width: 45%;
+    display: inline-block;
+    display: relative;
+}
+
+.page-content .content .client-info .row .control .input {
+    position: relative;
+}
+
+.page-content .content .client-info .row .control input {
+    border-radius: 3px;
+    border: none;
+    background: rgb(245, 245, 245);
+    color: #00355f;
+    height: 30px;
+    float: left;
+    width: 60%;
+    font-size: large;
+}
+
+.page-content .content .client-info .row .control .error-msg {
+    position: absolute;
+    /* left: 60%; */
+    /* float: left; */
+    background: rgba(255, 14, 0, 0.58);
+    /* height: 30px; */
+    /* line-height: 2; */
+    border-radius: 3px;
+    padding: 1px 5px;
+    top: 17px;
+    /* word-wrap: break-word; */
+    /* width: 63%; */
+    min-height: 20px;
+    min-width: 60%;
+    font-size: 14px;
+    text-align: left;
+}
+
+.page-content .content .client-info .clientInfoTable {
+    margin: auto;
+    text-align: center;
+    border: 1px solid rgba(245, 245, 245, 0.2);
+    padding: 2%;
+    border-radius: 8px;
+}
+
+.page-content .content .client-info .clientInfoTable .clientInfoButton {
+    padding-left: 185px;
+}
+
+.page-content .content .client-info .clientInfoTable .clientInfoButton button {
+    height: 25px;
+    width: 70px;
+    font-size: 15px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+
+@media(max-width:600px)
+{
+    .page-content .content .contactus-options {
+        margin-bottom: 20px;
+        height: 80px;
+    }
+     .page-content .content .contactus-options .contactus{
+         height: none;
+     }
+    .page-content .content .contactus-options .contactus span {
+        font-size: 30px;
+    }
+    .page-content .content .contactus-options .contactus .text {
+        font-size: 8px;
+    }
+    .page-content .content .client-info .clientInfoTable .clientInfo .row .text {
+        width: 100%;
+        display: inline-block;
+    }
+    .page-content .content .client-info .clientInfoTable .clientInfo {
+       padding: 1px 0px;
+    }
+    .page-content .content .client-info .clientInfoTable .clientInfo .mid-header{
+        margin: 10px;
+    }
+    .page-content .content .client-info .clientInfoTable .clientInfo .row {      
+    margin: 25px 5px;
+    }
+    .page-content .content .client-info .clientInfoTable .clientInfo .row .text label {
+        float: left;
+    }
+    .page-content .content .client-info .clientInfoTable .clientInfo .row .control,
+    .page-content .content .client-info .clientInfoTable .clientInfo .row .control input {
+        width: 100%;
+    }
+    .page-content .content .client-info{
+        padding: 1% 5%;
+    }
+    .page-content .content .client-info .row .control .error-msg{
+        width: 100%;
+    }
+    
+    .page-content .content .client-info .clientInfoTable .clientInfoButton {
+        padding-left: 0px;
+    }
+}

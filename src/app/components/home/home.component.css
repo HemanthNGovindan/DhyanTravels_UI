@@ -1,0 +1,415 @@
+.page-content{
+  min-height: 500px;
+}
+.movingcontent {
+    width: 100%;
+    height: 25px;
+    margin-bottom: 2px;
+    overflow: hidden;
+    background: #00355f;
+    color: whitesmoke;
+    text-align: center;
+    border-radius: 4px;
+}
+.home {
+    position: relative;
+}
+
+.movingcontent div {
+    line-height: 0px;
+    font-size: 14px;
+}
+/*enquiryform*/
+
+.enquiryform {
+    position: absolute;
+    top: 32%;
+    width: 50%;
+    left: 25%;
+    background: rgba(9, 28, 44, 0.82);
+    border-radius: 10px;
+    padding-bottom: 9px;
+}
+
+.enquiryform .enquirytype {
+    border-radius: 4px;
+    color: whitesmoke;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid rgba(245, 245, 245, 0.29);
+}
+
+.enquiryform .enquirytype div {
+    width: 50%;
+    float: left;
+    height: 100%;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.enquiryform .enquirytype div:hover {
+    color: #ffd205;
+    background: #00355f;
+    border-radius:  8px 8px 1px 1px;
+    border-bottom: 1px solid;
+}
+
+.enquiryform .enquirytype .select {
+    color: #ffd205;
+    background: #00355f;
+    border-radius:  8px 8px 1px 1px;
+    border-bottom: 1px solid;
+}
+
+.enquiryform .enquirycontrol {
+    padding: 2px 1px 0px 20px;
+}
+
+.enquiryform .enquirycontrol .control-group {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.enquiryform .enquirycontrol .control-group .control {
+    display: inline-block;
+    width: 32%;
+    padding: 0 5px;
+}
+
+.enquiryform .enquirycontrol .control-group .control input,
+.enquiryform .enquirycontrol .control-group .control select {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgba(245, 245, 245, 0.29);
+    background: transparent;
+    color: whitesmoke;
+    font-size: medium;
+    font-weight: 500;
+}
+
+.enquiryform .enquirycontrol .control-group .control option {
+    background: #00355f;
+}
+
+.enquiryform .enquirycontrol .control-group .control input:focus {
+    border-bottom: 1px solid whitesmoke;
+}
+
+.enquiryform .enquirycontrol .control-group .controlname {
+    color: whitesmoke;
+    font-size: small;
+}
+
+.enquiryform .enquirycontrol .control-group .inputcontrol {
+    margin-top: 3%;
+    position: relative;
+}
+
+.enquiryform .enquirycontrol .control-group button {
+    float: right;
+    margin-right: 2%;
+    width: 15%;
+    border-radius: 4px;
+    min-width: 65px;
+}
+
+
+.enquiryform .enquirycontrol .control-group .control .inputcontrol .error-msg {
+    position: absolute;
+    background: rgba(255, 14, 0, 0.65);
+    border-radius: 3px;
+    top: 20px;
+    min-height: 18px;
+    min-width: 100%;
+    font-size: 12px;
+    text-align: left;
+    color: whitesmoke;
+}
+.enquiryform .enquiry-result{
+    margin: 30px 0px;    
+}
+.enquiryform .enquiry-result .result{
+    text-align: center;
+    color: whitesmoke;
+    /* display: none; */
+}
+.home .fold-button{
+width: 70px;
+height: 30px;
+background:#ffd205;
+border-radius: 17px;
+float: left;
+margin-left: 45%;
+opacity: .8;
+}
+.home .fold-button div{    
+    width: 90%;
+    height: 90%;
+    border-radius: 12px;
+    margin: 2px auto;
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #00355f;
+}
+.home  .fold-button div::after{
+    content: 'Close';
+}
+.home  .fold-button span{
+    display: none;
+}
+.home .fold-enquiry{
+    top: 375px;
+animation: fold 1s forwards;
+color: whitesmoke;
+}
+.home .unfold-enquiry{
+    /* animation: fold 1s reverse; */
+}
+.home .unfold-button{
+    background:#00355f;
+opacity: .8;
+
+}
+.home .unfold-button div{ 
+    border: 2px solid #ffd205;
+}
+.home  .unfold-button div::after
+{
+    content: 'Request';
+}
+
+
+.Error {
+    color: red;
+    font-size: 12px;
+}
+
+.facebookpost{  
+    min-height: 160px;
+    width: 66%;
+    background: #f6d304;
+    margin: 10px auto;
+    border-radius: 4px;
+    margin-top: 45px;
+    position: relative;
+}
+
+
+.facebookpost .title {
+    color: #00355f;
+    font-size: 20px;
+    margin: 0px;
+    font-weight: bold;
+    padding-top: 10px;
+    text-align: center;
+}
+.facebookpost .posts{
+    display: none;
+    min-width: 100%;
+}
+.facebookpost .active{
+    display: inline-block;
+    transition: 2s;
+}
+
+.facebookpost .posts>div:not(:last-child){
+    padding:0px 20px;
+}
+.facebookpost .posts .header{
+width: 100%;
+display: inline-block;
+}
+.facebookpost .posts .header .story{
+    font-weight: bold;
+    color: #00355f;
+    margin-bottom: 6px;
+    width: 70%;
+    float: left;
+}
+.facebookpost .posts .header .postdate p{
+    margin-right: 10px;
+    font-size: 12px;
+    color: rgba(0, 53, 95, 0.63);
+    float: right;
+ }
+
+.facebookpost .posts .message p{
+    margin: -15px 0 0 0;
+}
+.facebookpost .posts .details .view-more-link{
+    float: right;
+    color: rgba(0, 53, 95, 0.63);
+    }
+    .facebookpost .posts  .postsdot {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+.facebookpost .posts .postsdot .spans>span{
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    background-color: #00355f;
+    border-radius: 50%;
+}
+.facebookpost .posts .postsdot .spans> span:first-child  {  
+    -webkit-animation: loadreviewpoints 1s ease-in-out forwards;
+    animation: loadreviewpoints  1s ease-in-out forwards;  
+} 
+.facebookpost .posts .postsdot .spans> span:nth-child(2) {
+    -webkit-animation: loadreviewpointschild 1s ease-in-out .15s forwards;
+    animation: loadreviewpointschild  1s ease-in-out .15s forwards;   
+}
+.facebookpost .posts .postsdot .spans> span:nth-child(3) {
+    -webkit-animation: loadreviewpointschild 1s ease-in-out .2s forwards;
+    animation: loadreviewpointschild  1s ease-in-out .2s forwards;   
+}
+
+
+@keyframes loadreviewpoints
+{
+    0%{
+        margin-left: 100%;       
+        opacity: 0.1;
+    }
+    25%{
+        margin-left: 70%;  
+        opacity: 0.4;
+    }
+    50%{
+        margin-left: 60%;  
+        opacity: 0.6;
+    }
+    75%{
+        margin-left: 55%;  
+        opacity: 0.8;
+    }
+    100%{
+        margin-left: 48%;  
+        opacity: 1;
+    }
+}
+@keyframes loadreviewpointschild
+{
+    0%{
+        margin-left: 60px;       
+        opacity: 0.1;
+    }
+    25%{
+        margin-left: 40px; 
+        opacity: 0.4;
+    }
+    50%{
+        margin-left: 30px;  
+        opacity: 0.6;
+    }
+    75%{
+        margin-left: 20px;  
+        opacity: 0.8;
+    }
+    100%{
+        margin-left: 10px;  
+        opacity: 1;
+    }
+}
+
+@keyframes fold
+{
+    0%{
+        border-radius: 4%;
+        opacity: .8        
+    }
+    25%{
+        border-radius: 30%;   
+        opacity: .6
+    }
+    50%{
+        border-radius:60%; 
+        opacity: .4       
+        
+    }
+    75%{
+        border-radius:80%; 
+        opacity: .2   
+    }
+    100%{
+        background: transparent;    
+    }
+}
+
+@media (max-width:600px) {
+    /* smartphones, iPhone, portrait 480x320 phones */
+    .movingcontent {
+        height: inherit;
+    }
+    .movingcontent div {
+        line-height: normal;
+    }
+    .enquiryform {
+        position: static;
+        width: 100%;
+        margin: 8px 0 10px 0;
+        padding-bottom: 30px;
+    }
+    .enquiryform .enquirycontrol .control-group {
+        padding: 0px;
+        margin: 15px 0;
+    }
+    .enquiryform .enquirycontrol .control-group .control {
+        display: block;
+        width: 90%;
+        left: 5%;
+        padding: 10px 5%;
+    }
+    .enquiryform .enquirycontrol .control-group .control .inputcontrol select {
+        width: 100%;
+        height: 20px;
+    }
+    .enquiryform .enquirycontrol .control-group .control .inputcontrol .error-msg {
+        min-width: 100%;
+    }
+
+    .facebookpost
+    {
+        margin: 7px auto;
+        width: 100%;
+    }
+    .facebookpost .posts > div{
+        padding: 0px 10px;
+        margin-bottom: 10px;
+    }
+    .facebookpost .posts .header .story{
+        width: 100%;
+    }
+    .facebookpost .posts .header p{
+        margin: 2px 0px;
+    }
+    .facebookpost .posts .postsdot    {
+        position: relative;
+        bottom: 0px;
+
+    }
+    .facebookpost .posts .postsdot .spans{
+    margin-right: 40px;
+    overflow: hidden;
+    }
+    .home .fold-button{
+        display: none;
+    }
+}
+@media (max-width:950px) and (min-width:600px) {
+    .enquiryform {
+        top: 36%;
+        width: 90%;
+        left: 5%;
+    }
+    .facebookpost
+    {
+        margin-top:100px;
+    }
+}

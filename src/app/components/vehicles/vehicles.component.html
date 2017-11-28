@@ -1,0 +1,31 @@
+<div class="page-content" *ngIf="this.APIService.LoadPage">
+    <div class="cabsList">
+        <h1>Pick your cab</h1>
+        <div class="cabs-repeat" *ngFor="let cab of Vehicles">
+            <div class="cabs">
+                <div class="cab-img">
+                    <img src="{{cab.ImgURL}}" />
+                </div>
+                <div class="cab-description">
+                    <div class="cab-title">
+                        <div class="cab-name">{{cab.Title}}</div>
+                        <span class="cab-subname">{{cab.Type}}</span>
+                    </div>
+                    <div class="cab-details">
+                        <div class="cab-desc">
+                            <p class="">{{cab.ShortDescription}}</p>
+                            <p class="nghf ngh-people">Seating Capacity : {{cab.SeatingCapacity}}</p>
+                        </div>
+                        <div class="cab-rate">
+                            <p class="nghf">Cost :  Non AC - <span class="ngh-rs"></span>{{cab.CostNAC}}{{" | "}}AC - <span class="ngh-rs"></span>{{cab.CostAC}}{{" /Km"}}</p> 
+                            <p class="nghf">Min Travel: <span class="nghf2 ngh-mile"></span>{{cab.MinDistancePerDay}}</p>
+                            <div class="button-request">
+                                <button (click)="SelectVehicle(cab)">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

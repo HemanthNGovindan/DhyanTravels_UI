@@ -1,0 +1,95 @@
+.main-header {
+    background: #ffd205;
+    height: 80px;
+}
+.main-header .line-blue{
+    height: 2px;
+    background-color: #000d58;
+    display: inline-block;
+    width: 100%;
+}
+.main-header .line-yellow {
+    height: 2px;
+    background-color: #f3cc2f;
+    margin-bottom: 3px;
+    width: 100%;
+}
+
+.nav {
+    height: 50px;
+    width: 100%;
+    margin-right: 10%;
+    position: relative;
+}
+
+.nav .nav-list {
+    float: right;
+    font-size: 20px;
+    margin-top: 53px;
+    margin-bottom: 0px;
+}
+
+.nav .nav-list li {
+    display: table-cell;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+}
+.nav .nav-list li a{
+    text-decoration: none;
+     color: #00355f;
+}
+
+.nav .nav-list li a:hover {
+    border-bottom: 3px solid #00355f;
+    transition: border-bottom 0.2s ease;
+    cursor: pointer;
+}
+
+.nav .nav-list .select .select {
+    border-bottom: 3px solid #00355f;
+    transition: border-bottom 0.5s;
+}
+
+.main-section{
+  display: block;
+  min-height: 60%;
+}
+
+@media (max-width:600px) {
+    /* smartphones, iPhone, portrait 480x320 phones */
+    .main-header {
+        height: 90px;
+    }
+    .main-header .logo {
+        width: 50%;
+        margin: auto;
+        position: inherit;
+        top: 0;
+    }
+    .nav
+    {
+       height: 45px;
+    }
+    .nav .nav-list {
+        position: absolute;
+        top: 36px;
+        padding: 0;
+        margin-top: 20px;
+    }
+    .nav .nav-list li a:hover {
+        border-bottom: none;
+    }
+    .nav .nav-list li:hover,
+    .nav .nav-list .select {
+        border-bottom: 4px solid #00355f;
+        transition: border-bottom 0.5s;
+    }
+    .nav .nav-list .select .select {
+        border-bottom: none;
+    }
+    .nav .nav-list li {
+        font-size: 14px;
+        line-height: 30px;
+    }
+}

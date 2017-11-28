@@ -1,0 +1,180 @@
+
+.cabsList {
+    width: 70%;
+    margin: 0 auto 40px auto;
+}
+
+.cabsList .cabs-repeat {
+    border: 1px solid rgba(0, 53, 95, 0.2);
+    box-shadow: 0px 2px 5px #e4e4e4;
+    padding: 10px 20px 15px 20px;
+    margin: auto;
+    width: 100%;
+    margin-bottom: 12px;
+    color: #00355f;
+    border-radius: 2px;
+}
+
+.cabsList .cabs-repeat:hover {
+    box-shadow: 1px 1px 15px #827e7e;
+    margin: 10px;
+}
+
+.cabsList .cabs-repeat .cabs {
+    overflow: hidden;
+}
+
+.cabsList .cabs-repeat .cabs .cab-img {    
+    width: 15%;
+    float: left;
+}
+
+.cabsList .cabs-repeat .cabs .cab-img>img {
+    width: 100%;
+    height: 130px;
+}
+
+.cabsList .cabs-repeat .cabs .cab-description {
+    float: right;
+    width: 80%;
+}
+.cabsList .cabs-repeat .cabs .cab-description>div{
+    width: 100%;
+}
+
+.cabsList .cabs-repeat .cabs .cab-description .cab-title {
+border-bottom: 1px solid rgba(0, 53, 95, 0.2);
+width: 100%;
+}
+.cabsList .cabs-repeat .cabs .cab-description .cab-title .cab-name {
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    float: left;
+    font-size: 20px;
+}
+.cabsList .cabs-repeat .cabs .cab-description .cab-title .cab-subname {
+    letter-spacing: 0.5px;
+    color: rgba(22, 51, 102, 0.48);
+    font-size: 13px;
+    /* content: '-'; */
+    /* float: left; */
+    display: inline-block;
+    padding: 7px 4px;
+}
+.cabsList .cabs-repeat .cabs .cab-description .cab-details>div{
+    width: 45%;
+}
+.cabsList .cabs-repeat .cabs .cab-description .cab-details p{
+    margin: 10px 0px;
+}
+.cabsList .cabs-repeat .cabs .cab-description .cab-details .cab-desc {
+    border-right: 1px solid rgba(0, 53, 95, 0.15);
+    float: left;
+    margin: 10px 0px;
+    padding: 0px 15px;
+}
+
+.cabsList .cabs-repeat .cabs .cab-description .cab-details .cab-rate {
+    float: right;
+}
+.cabsList .cabs-repeat .cabs .cab-rate button {
+    background: #00355f;
+    color: #ffd205;
+    outline: none;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-right: 15px;
+}
+
+.cabsList .cabs-repeat .cabs .cab-rate button:hover {
+    background: #ffd205;
+    outline: none;
+    color: #00355f;
+}
+
+.cabsList .cabs-repeat .cabs .nghf::after {
+    margin-left: 5px;
+}
+
+
+/*Device Specific*/
+@media (max-width:800px) {
+    .cabsList {
+        width: 100%;
+        font-size: 10px;
+    }
+    .cabsList h1{
+        font-size: 20px;
+    }
+    .cabsList .cabs-repeat .cab-details .cab-rate button{
+            height: 20px;
+    width: 50px;
+    min-height: 20px;
+    min-width: 50px;
+    font-size: 12px;
+    padding: 0px 0px;
+    }
+}
+
+@media (max-width:677px) {
+    .cabsList .cabs-repeat{
+        padding: 3px 10px;
+    }
+    .cabsList .cabs-repeat .cab-details .cab-description>.cab-desc {
+        width: calc(100% - 150px);
+        border: 0;
+        padding: 0 20px;
+    }
+    .cabsList .cabs-repeat .cab-details .cab-description>.cab-rate {
+        width: calc(100% - 150px);
+        padding: 0 20px;
+    }
+    .cabsList .cabs-repeat .cab-details .cab-description>.cab-desc p {
+        margin: 0;
+        margin-bottom: 5px;
+    }
+    .cabsList .cabs-repeat .cab-details .cab-description>.cab-rate .nghf {
+        margin-top: 0px;
+        margin-bottom: 8px;
+    }
+}
+
+@media(max-width:450px) {
+    .cabsList .cabs-repeat .cabs .cab-img {    
+        width: 35%;
+        float: left;
+    }
+    .cabsList .cabs-repeat .cabs .cab-description .cab-title .cab-name {
+    font-size: 15px;
+    }
+    .cabsList .cabs-repeat .cabs .cab-description .cab-title .cab-subname {
+     padding: 4px 4px;
+     font-size: 11px;
+    }
+    .cabsList .cabs-repeat .cabs .cab-description {
+        float: right;
+        width: 60%;
+    }
+    .cabsList .cabs-repeat .cabs .cab-description .cab-details p {
+        margin: 8px 0px;
+    }
+    .cabsList .cabs-repeat .cabs .cab-description .cab-details .cab-desc {
+        border-right: none;
+        float: none;
+        margin: -5px 0px;
+        padding: 0;
+    }
+    .cabsList .cabs-repeat .cabs .cab-description .cab-details>div{
+        width: 100%;
+    }
+    .cabsList .cabs-repeat .cabs .cab-description .cab-details .cab-rate  {
+        float: none;
+        padding: none;
+    }
+    .cabsList .cabs-repeat .cabs .cab-description .cab-details .cab-rate .button-request {
+        margin: 0px;
+    }
+}

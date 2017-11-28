@@ -1,0 +1,24 @@
+<div class="cabimages" (mouseenter)="PauseAndDisplay(cabReqestType,'pause')" (mouseleave)="PauseAndDisplay(cabReqestType,'play')">
+  <div class="img-display" [ngClass]="{'active': cabimg.Active === 'true'}" *ngFor="let cabimg of one_slides">
+    <img id="cab" [src]="cabimg.ImgURL">
+    <div class="image-text left" [ngClass]="{'show':showText_CAB}">
+        <p [innerHtml]="cabimg.HeaderText"></p>
+      <p>{{cabimg.DescriptionText}}</p>
+    </div>
+  </div>
+  <ul class="carousel-indicators">
+    <li *ngFor="let cabimg of one_slides" (click)="selectImage(cabReqestType,true,cabimg)" [ngClass]="{'active': cabimg.Active === 'true'}"></li>
+  </ul>
+</div>
+<div class="tourimages" (mouseenter)="PauseAndDisplay(tripReqestType,'pause')" (mouseleave)="PauseAndDisplay(tripReqestType,'play')">
+  <div class="img-display" [ngClass]="{'active': tourimg.Active === 'true'}" *ngFor="let tourimg of two_slides">
+    <img id="tour" [src]="tourimg.ImgURL">
+    <div class="image-text right" [ngClass]="{'show':showText_TRIP}">
+      <p [innerHtml]="tourimg.HeaderText"></p>
+      <p>{{tourimg.DescriptionText}}</p>
+    </div>
+  </div>
+  <ul class="carousel-indicators">
+    <li *ngFor="let tourimg of two_slides" (click)="selectImage(tripReqestType,true,tourimg)" [ngClass]="{'active': tourimg.Active === 'true'}"></li>
+  </ul>
+</div>

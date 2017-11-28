@@ -1,0 +1,243 @@
+/*
+Dhyan Travels
+*/
+/*Font Styling*/
+@font-face {
+  font-family: 'ngh-dt';
+  src: url('assets/fonts/ngh-dt.eot?6fp3ju');
+  src: url('assets/fonts/ngh-dt.eot?6fp3ju#iefix') format('embedded-opentype'), url('assets/fonts/ngh-dt.ttf?6fp3ju') format('truetype'), url('assets/fonts/ngh-dt.woff?6fp3ju') format('woff'), url('assets/fonts/ngh-dt.svg?6fp3ju#ngh-dt') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('assets/fonts/Lato-Regular.ttf?6fp3ju') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'dt2';
+  src: url('assets/fonts/dt2.eot?2rx4wa');
+  src: url('assets/fonts/dt2.eot?2rx4wa#iefix') format('embedded-opentype'), url('assets/fonts/dt2.ttf?2rx4wa') format('truetype'), url('assets/fonts/dt2.woff?2rx4wa') format('woff'), url('assets/fonts/dt2.svg?2rx4wa#dt2') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'dt3';
+  src:  url('assets/fonts/dt3.eot?hdqc19');
+  src:  url('assets/fonts/dt3.eot?hdqc19#iefix') format('embedded-opentype'),
+    url('assets/fonts/dt3.ttf?hdqc19') format('truetype'),
+    url('assets/fonts/dt3.woff?hdqc19') format('woff'),
+    url('assets/fonts/dt3.svg?hdqc19#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Lato;
+  margin: 0px;
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+app-root{
+  display: block;
+  height: 100%;
+}
+.main-section{
+  display: block;
+  min-height: calc(100% - 144px);
+}
+
+.logo {
+  width: 15%;
+  height: 100%;
+  background-image: url("assets/img/Logo.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 30%;
+  left: 1%;
+}
+
+button {
+  background: #ffd205;
+  color: #00355f;
+  border: none;
+  outline: none;
+  min-height: 25px;
+  min-width: 80px;
+  border-radius: 4px;
+}
+.display-none, .hidden {
+  display: none;
+}
+
+button:hover {
+  background: rgb(255, 235, 146);
+}
+
+.page-content {
+  width: 100%;
+  padding: 2px 10px;
+  box-sizing: border-box;
+  margin: auto;
+  min-height: -moz-calc(100% - 127px);
+  min-height: -webkit-calc(100% - 127px);
+  min-height: calc(100% - 127px);
+}
+
+.form {
+  height: 300px;
+  width: 600px;
+}
+
+.nghf {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'ngh-dt' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nghf.hover:hover {
+  font-size: 60px;
+  transition: font-size;
+}
+
+.ngh-rs::after {
+  content: "\e906";
+     font-size: 10px;
+    margin-right: 2px;
+}
+
+.ngh-phone:before {
+  content: "\e900";
+}
+
+.ngh-contact:before {
+  content: "\e900";
+}
+
+.ngh-automobile:before {
+  content: "\e901";
+}
+
+.ngh-car:before {
+  content: "\e901";
+}
+
+.ngh-phone_in_talk:before {
+  content: "\e902";
+}
+
+.ngh-people::after {
+  content: "\e903";
+}
+
+.ngh-facebook:before {
+  content: "\e904";
+}
+
+.ngh-brand:before {
+  content: "\e904";
+}
+
+.ngh-social:before {
+  content: "\e904";
+}
+
+.ngh-mail:before {
+  content: "\e905";
+}
+
+.ngh-contact2:before {
+  content: "\e905";
+}
+
+.ngh-support:before {
+  content: "\e905";
+}
+
+.ngh-newsletter:before {
+  content: "\e905";
+}
+
+.ngh-letter:before {
+  content: "\e905";
+}
+
+.ngh-email:before {
+  content: "\e905";
+}
+
+.ngh-envelop:before {
+  content: "\e905";
+}
+
+.ngh-social2:before {
+  content: "\e905";
+}
+
+.nghff {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'dt2' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nghff-palace:before {
+  content: "\e900";
+  
+}
+.nghf2 {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'dt3' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ngh-mile:before {
+  content: "\e900";
+      margin-right: 2px;
+}
+
+@media (max-width:600px){
+  .ngh-rs::after {
+       font-size: 7px;
+  }
+}

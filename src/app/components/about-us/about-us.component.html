@@ -1,0 +1,27 @@
+<div class="page-content" *ngIf="this.APIService.LoadPage">
+    <div class="aboutus">
+
+        <h1>{{AboutUsPageHeader}}</h1>
+        <p class="about-text">{{AboutUsText}}</p>
+        <div class="service">
+            <div class="content" (viewnotify)="onview('')"  (click)="oncick()">
+                <div class="fadedown" [ngClass]="{'animate':animatecab }">
+                    <p class="nghf ngh-car">
+                        <p class="slogan" [innerHtml]=TravelSolganText></p>
+                </div>
+            </div>
+            <div class="content" (viewnotify)="onview('')" (click)="oncick()">
+                <div class="fadedown" [ngClass]="{'animate':animatetrip }">
+                    <p class="nghff nghff-palace">
+                        <p class="slogan" [innerHtml]=TourSloganText></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="addcontent">
+        <p>Powered by</p>
+        <a href="https://msg91.com/startups/?utm_source=startup-banner">
+            <img src="https://msg91.com/images/startups/msg91Badge.png" width="120" height="90" title="MSG91 - SMS for Startups" alt="Bulk SMS - MSG91">
+        </a>
+    </div>

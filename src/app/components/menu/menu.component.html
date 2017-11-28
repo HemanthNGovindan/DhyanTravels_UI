@@ -1,0 +1,11 @@
+<div class="main-header">
+  <div class="nav">
+    <div class="logo"></div>
+    <ul class="nav-list">
+      <li [routerLinkActive]="['select']" *ngFor="let links of LinkItems"><a [routerLinkActive]="['select']" [routerLink]="[links.Link]">{{links.LinkName}}</a></li>
+    </ul>
+
+  </div>
+  <!-- <div class="line-blue"></div> -->
+  <!-- <div class="line-yellow"></div> -->
+</div>

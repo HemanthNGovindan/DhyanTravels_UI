@@ -1,0 +1,33 @@
+.loader{
+    margin: 10px;
+    text-align: center;
+}
+.loader>span{
+   width: 50px;
+   height: 50px;
+   display: inline-block;
+   margin: 5px 2px;
+   background-color:transparent;
+   border: 8px solid #ffd205;
+   border-radius: 50%;
+   animation: load infinite ease-in-out;
+   margin-top: 60px;   
+}
+/* .loader span:nth-child(2n) {
+    animation-delay: 0.15s
+} */
+
+@keyframes load{
+    0%,80%,100%
+    {
+        transform: scale(0.6); 
+        opacity: 0.2;
+    }
+    40%
+    {
+        transform: scale(1.0); 
+        opacity: 1;
+        
+    }
+    
+}

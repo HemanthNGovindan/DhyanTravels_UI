@@ -1,0 +1,8 @@
+<div class="loader" *ngIf="ShowLoader">
+  <span *ngFor="let loader of LoaderControls" [style.animation-delay.s]="loader.DelayTime" [style.animation-duration.s]="LoaderAnimationTime"
+    [style.border-color]="LoaderColur" [style.width.px]="LoaderSize" [style.height.px]="LoaderSize" >
+
+  </span>
+  <p [style.color]="LoaderColur">One moment please...</p>
+
+</div>

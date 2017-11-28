@@ -1,0 +1,148 @@
+<div class="page-content" *ngIf="this.APIService.LoadPage">
+    <form [formGroup]="enquiryForm" id="enquiryForm">
+
+        <div class="movingcontent">
+            <div>
+                <p>{{this.APIService.PageContent.Content.PageText.CampaignText}}</p>
+            </div>
+        </div>
+        <div class="home">
+            <app-carousel [Slides]="Slides"></app-carousel>
+            <div class="enquiryform" novalidate [ngClass]="{'fold-enquiry':foldEnquiry,'unfold-enquiry':!foldEnquiry}">
+                <div class="enquirytype" [ngClass]="{'display-none':HideEnquiryControl||foldEnquiry}">
+                    <div [ngClass]="{'select':IsCabRequest}" (click)="ToggleService('CAB')">Taxi Service</div>
+                    <div [ngClass]="{'select':!IsCabRequest}" (click)="ToggleService('TRIP')">Tour Package</div>
+                </div>
+                <div class="enquirycontrol"  [ngClass]="{'display-none':HideEnquiryControl||foldEnquiry}">
+                    <div class="control-group">
+                        <div class="control">
+                            <label class="controlname">Full Name</label>
+                            <div class="inputcontrol">
+                                <input id="Name" [ngClass]="{'Error': enquiryForm.controls.FullName.errors}" type="text" maxlength="10" formControlName="FullName"
+                                    placeholder="Your Full Name" />
+                                <p class="error-msg" *ngIf="ReturnValid('FullName')">{{ReturnValid('FullName')}}</p>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <label class="controlname">Phone Number</label>
+                            <div class="inputcontrol">
+                                <input id="Phone" [ngClass]="{'Error': enquiryForm.controls.PhoneNumber.errors}" type="text" formControlName="PhoneNumber"
+                                    placeholder="Your Phone Number" />
+                                <p class="error-msg" *ngIf="ReturnValid('PhoneNumber')">{{ReturnValid('PhoneNumber')}}</p>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <label class="controlname">Date</label>
+                            <div class="inputcontrol">
+                                <input id="Date" type="date" name="bday" formControlName="TravelDate" placeholder="Date of birth" />
+                                <p class="error-msg" *ngIf="ReturnValid('TravelDate')">{{ReturnValid('TravelDate')}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="control" *ngIf="IsCabRequest">
+                            <label class="controlname">From</label>
+                            <div class="inputcontrol">
+                                <input id="From" [ngClass]="{'Error': enquiryForm.controls.Cab_FromPlace.errors}" type="text" name="Cab_FromPlace" formControlName="Cab_FromPlace"
+                                    placeholder="Your Location" />
+                                <p class="error-msg" *ngIf="ReturnValid('Cab_FromPlace')">{{ReturnValid('Cab_FromPlace')}}</p>
+                            </div>
+                        </div>
+                        <div class="control" *ngIf="IsCabRequest">
+                            <label class="controlname">To</label>
+                            <div class="inputcontrol">
+                                <input id="To" [ngClass]="{'Error': enquiryForm.controls.Cab_ToPlace.errors}" type="text" formControlName="Cab_ToPlace" placeholder="Your Destination"
+                                />
+                                <p class="error-msg" *ngIf="ReturnValid('Cab_ToPlace')">{{ReturnValid('Cab_ToPlace')}}</p>
+                            </div>
+                        </div>
+                        <div class="control" *ngIf="!IsCabRequest">
+                            <label class="controlname">Number of Days</label>
+                            <div class="inputcontrol">
+                                <input id="Days" [ngClass]="{'Error': enquiryForm.controls.Trip_NumberOfDays.errors}" type="text" formControlName="Trip_NumberOfDays"
+                                    placeholder="Number of days" />
+                                <p class="error-msg" *ngIf="ReturnValid('Trip_NumberOfDays')">{{ReturnValid('Trip_NumberOfDays')}}</p>
+                            </div>
+                        </div>
+                        <div class="control" *ngIf="!IsCabRequest">
+                            <label class="controlname">Places</label>
+                            <div class="inputcontrol">
+                                <input id="Places" [ngClass]="{'Error': enquiryForm.controls.Trip_Places.errors}" type="text" formControlName="Trip_Places"
+                                    placeholder="Places" />
+                                <p class="error-msg" *ngIf="ReturnValid('Trip_Places')">{{ReturnValid('Trip_Places')}}</p>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <label class="controlname">Your Taxi</label>
+                            <div class="inputcontrol">
+
+                                <select id="Taxi" #CabSelect (change)="CabSelectChange($event, CabSelect)" [ngClass]="{'Error': enquiryForm.controls.Vehicle.errors}" type="" id="NONAC" name="CabID" placeholder="Your Vehicle"
+                                    formControlName="Vehicle">
+                                    <option value="" disabled selected>Select your Cab</option>
+                                    <option *ngFor="let vehicle of CABS" [ngValue]="vehicle.Title">{{vehicle.Title}}</option>
+                                </select>
+
+                                <p class="error-msg" *ngIf="ReturnValid('Vehicle')">{{ReturnValid('Vehicle')}}</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="control-group" style="margin-top: 20px;">
+                        <button (click)="SubmitEnquiryRequest('CLEAR')">Clear</button>
+                        <button (click)="SubmitEnquiryRequest('SUBMIT')">Submit</button>
+                    </div>
+
+                </div>
+                <div class="fold-button"  [ngClass]="{'unfold-button':foldEnquiry,'display-none':HideEnquiryControl}" (click)="FoldClick('fold')"><div><span></span></div></div>
+                <div class="enquiry-result" [ngStyle]="{'margin':(Response.ResultText === ''  || !ShowLoader)? '0px 0px':'30px 0px'}">
+                    <app-loader [ShowLoader]="ShowLoader"></app-loader>
+                    <div [ngStyle]="{'display':(Response.ResultText === '')? 'none':'block'}" class="result">
+                        <p [innerHtml]="Response.ResultText"></p>
+                        <button (click)="ResultClick()">Ok</button>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="facebookpostcontent" *ngIf="ShowFacebookPosts">
+                <div class="facebookpost">
+                    <p class='title'>Our Social Page Updates</p>
+                    <div class="posts" *ngFor="let post of FacebookPosts.posts.data; let i=index;" [ngClass]="{'active':post.Active}">
+                        <div class="header">
+                            <div class="story">
+                                <p>{{post.story?post.story:'New Review'}}</p>
+                            </div>
+                            <div class="postdate">
+                                <p>
+                                    <b>Posted On : </b>{{post.created_time | postdateformat}}</p>
+                            </div>
+                        </div>
+                        <div class="details">
+                            <div class="message">
+                                <p [id]="postmessage + i.toString()" #textContent> {{post.message}} </p>
+                            </div>
+                            <div class="view-more-link">
+                                <a viewmore [content-length]="100" [content-element]="textContent">
+                                    <span class="less"><< Less 
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="more">More >>
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="postsdot">
+                            <div class="spans">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </form>
+</div>
+<div class="loading" *ngIf="!this.APIService.LoadPage">Loading Wait...</div>
