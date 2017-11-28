@@ -6,7 +6,7 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 @Injectable()
 export class APIService {
-    private apiURL = '';
+    private apiURL = 'http://localhost:60543';
     public PageContent: any;
     public LoadPage: boolean = false;
     public IPAddress: string = '';
