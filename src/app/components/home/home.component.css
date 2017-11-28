@@ -144,6 +144,7 @@ border-radius: 17px;
 float: left;
 margin-left: 45%;
 opacity: .8;
+cursor: pointer;
 }
 .home .fold-button:hover{
     background:rgb(255, 235, 146);
@@ -176,6 +177,7 @@ color: whitesmoke;
 .home .unfold-button{
     background:#00355f;
 opacity: .8;
+cursor: pointer;
 
 }
 .home .unfold-button:hover{

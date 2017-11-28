@@ -82,6 +82,9 @@ button {
   min-width: 80px;
   border-radius: 4px;
 }
+button:hover{
+cursor: pointer;
+}
 .display-none, .hidden {
   display: none;
 }
